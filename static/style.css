@@ -61,7 +61,7 @@ button:hover {
 }
 
 .error {
-    color: red;
+    color: black;
     font-weight: bold;
     margin-top: 10px;
 }

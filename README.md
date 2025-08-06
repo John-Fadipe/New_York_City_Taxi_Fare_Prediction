@@ -1,33 +1,34 @@
-# 🗽 New York City Taxi Fare Prediction
+# NYC Taxi Fare Prediction 🚖
 
-This project involves building a machine learning model to predict NYC taxi fares based on various ride-related features such as date, time, location, and passenger count.
+This project predicts NYC taxi fares using a machine learning model trained on historical ride data, including geolocation and datetime features. The model ranked in the **top 30% submissions** on Kaggle.
 
-📊 **Dataset**: [NYC Taxi Fare Prediction - Kaggle](https://www.kaggle.com/competitions/new-york-city-taxi-fare-prediction/data)
+## 📌 Project Overview
 
----
+- Predicts fare amount based on pickup/dropoff location, passenger count, datetime, and landmark proximity.
+- Includes a Flask web app interface for live user input and fare prediction.
+- Built with a custom `TaxiFareModel` class for preprocessing and inference.
 
-## 🚀 Tech Stack & Tools
+## 📊 Model
 
-- **Languages**: Python  
-- **Libraries**: `Scikit-learn`, `NumPy`, `Pandas`  
-- **Models Used**:
-  - Linear Regression  
-  - Ridge Regression  
-  - Random Forest  
-  - Gradient Boosting  
+- **Model Type**: XGBoost Regressor (`reg:squarederror`)
+- **Evaluation**: Root Mean Squared Error (RMSE)
+- **Rank**: Top 30% on Kaggle leaderboard
 
-- **Framework**: Flask (for API deployment)  
-- **Hosting**: Render  
+## 🧠 Key Features
 
----
+- **Haversine Distance** calculation
+- Landmark distances (JFK, LGA, EWR, MET, WTC)
+- Datetime feature extraction
+- Geolocation via `geopy`
+- Custom preprocessing pipeline
+- Model wrapped for production use with `joblib`
 
-## ⚙️ Key Processes
+## 🚀 App Features
 
-- **Data Preprocessing**: Handled missing values, removed outliers, and processed geographic coordinates.
-- **Feature Engineering**: 
-  - Extracted datetime features (hour, day of week, etc.)
-  - Calculated haversine distance between pickup and dropoff.
-- **Model Training**: Trained and evaluated various regression models using RMSE.
-- **Deployment**: 
-  - Built a Flask API to serve the trained model.
-  - Deployed on [Render](####) for live access.
+- Frontend: HTML + CSS (Bootstrap)
+- Backend: Flask
+- Inputs: Pickup address, dropoff address, number of passengers
+- Output: Predicted fare
+
+## 📁 Project Structure
+
