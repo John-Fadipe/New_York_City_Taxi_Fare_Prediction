@@ -25,6 +25,7 @@ def predict():
         error = f"Invalid input: {ve}"
     except Exception as e:
         error = "❌ Could not process your request. Please check your inputs."
+        print(f"[PREDICTION ERROR] {e}")
 
     return render_template("index.html",
                            predictions=predictions,
