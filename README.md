@@ -29,6 +29,3 @@ This project predicts NYC taxi fares using a machine learning model trained on h
 - Backend: Flask
 - Inputs: Pickup address, dropoff address, number of passengers
 - Output: Predicted fare
-
-## 📁 Project Structure
-
